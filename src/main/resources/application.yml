@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: microservices-communication-grpc
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices_communication_grpc
+    username: root
+    password: MYSQL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+grpc:
+  server:
+    port: 9090
+    enable-reflection: true
+
+server:
+  protocol: HTTP/2
